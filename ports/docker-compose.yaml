@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  #Short syntax
+  httpd:
+    container_name: httpd
+    image: httpd:latest
+    ports:
+      - "8080:80"
+
+  #Long syntax
+  httpd2:
+    container_name: httpd2
+    image: httpd:latest
+    ports:
+      - protocol: tcp
+        published: 80 
+        target: 80
+    
+    
